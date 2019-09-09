@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>My Best Friend</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Modak|Pacifico|Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row text-center title">
+          <div class="col">
+            <h1>My Best Friend</h1>
+            <div class="alert alert-success" role="alert">oi</div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap">
+          <div class="col-md-6 col-sm-12 py-3">
+            <form id="formDog">
+              <div class="form-group">
+                <label for="dogList">Escolha a sua raça:</label>
+                <select name="dogList" id="dogList" class="form-control"></select>
+              </div>
+
+              <div class="form-group">
+                <label for="dogName">Nome:</label>
+                <input type="text" class="form-control" id="dogName" placeholder="My Best Friend">
+              </div>
+              
+              <div class="form-group">
+                <label for="fontList">Fonte:</label>
+                <select name="fontList" id="fontList" class="form-control" >
+                  <option value="Josefin Slab">Josefin Slab</option>
+                  <option value="Lobster">Lobster</option>
+                  <option value="Modak">Modak</option>
+                  <option selected value="Pacifico">Pacifico</option>
+                  <option value="Roboto">Roboto</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="colorList">Cor:</label>
+                <select name="colorList" id="colorList" class="form-control" >
+                  <option value="#0000ff">Azul</option>
+                  <option value="#ff00ff">Magenta</option>
+                  <option selected value="#000000">Preto</option>
+                  <option value="#00ff00">Verde</option>
+                  <option value="#ff0000">Vermelho</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-dark btn-block">Salvar</button>
+            </form>
+          </div>
+
+          <div class="col-md-6 col-sm-12 py-3 pictureFrame">
+            <div>
+              <div class="pictureContainer"> 
+                  <img id="dogPicture" src="images/dog-default.svg" class="img-fluid"/> 
+                  <div id="dogText">My Best Friend</div>  
+              </div>
+
+              <div id="dogLabel">My Best Friend</div>
+            </div>
+            
+          </div>
+
+        </div> <!-- flex end -->
+
+        <div class="row text-center my-2">
+          <div class="col">
+            Dados salvos em: <span id="dateSave"></span>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col">
+            <button type="submit" id="buttonDelete" class="btn mb-2 btn-danger">Excluir Dados</button>
+          </div>
+        </div>
+
+      </div> <!-- container end -->
+    </div> <!-- container-fluid end -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

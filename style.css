@@ -1,0 +1,79 @@
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Modak', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Josefin Slab', serif; */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #33ade6;
+  background-image: url("images/cardboard.png"), url("images/grass.png");
+  background-position: top, bottom;
+  background-repeat: repeat, repeat-x;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.title {
+  margin: 0.8rem 0px;
+}
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.alert{
+  display:none;
+}
+
+form {
+  margin: 0;
+}
+
+#dogList {
+  text-transform: capitalize;
+}
+
+#formDog .btn {
+  margin-top: 1.5rem;
+}
+
+.pictureFrame > div {
+  padding: 20px;
+  background: white;
+  box-shadow: 2px 3px 7px #656565;
+  transform: rotate(5deg);
+}
+
+.pictureContainer {
+  position: relative;
+  background: grey;
+}
+
+#dogPicture {
+  text-align: center;
+  width: 100%;
+  height: inherit;
+}
+
+#dogText, #dogLabel {
+  font-family: 'Pacifico', cursive;
+}
+
+#dogText {
+  position: absolute;
+  color: white;
+  padding: 5px 10px;
+  background: rgba( 0, 0, 0 , 0.7);
+  width: 100%;
+  font-size: 1.2rem;
+  bottom: 0;
+}
+
+#dogLabel {
+  text-align: center;
+  padding: 20px 20px 0 20px;
+  font-size: 2rem;
+}
