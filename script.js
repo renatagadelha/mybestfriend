@@ -92,7 +92,8 @@ function changeColor() {
 //
 // Storage
 //
-function saveForm() {
+function saveForm(evt) {
+  evt.preventDefault();
   const selectedBreed = dogsList.options[dogsList.selectedIndex].value;
   const randomImage = dogPicture.src;
   const insertedName = dogName.value;
@@ -111,8 +112,7 @@ function saveForm() {
 
   if (typeof (Storage) !== 'undefined') {
     localStorage.setItem('mybestfriend', JSON.stringify(dog));
-    // notifyUser('Dados salvos com sucesso! :)', 'alert-success');
-    alert('Dados salvos com sucesso! :)');
+    notifyUser('Dados salvos com sucesso! :)', 'alert-success');
   } else {
     notifyUser('Desculpe, seu navegador não suporta Web Storage! :(', 'alert-danger');
   }
@@ -122,10 +122,6 @@ function retrieveForm() {
   if (typeof (Storage) !== 'undefined') {
     const retrievedObject = localStorage.getItem('mybestfriend');
     const parsedObject = JSON.parse(retrievedObject);
-
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    // console.log('typeof mybestfriend: ' + typeof parsedObject);
-
     const selectedBreed = parsedObject.breed;
     const randomImage = parsedObject.picture;
     const insertedName = parsedObject.name;
@@ -162,9 +158,7 @@ function deleteStorage() {
   try {
     window.localStorage.removeItem('mybestfriend');
     window.scrollTo(0, 0);
-    // setTimeout(() => {
-    //   window.location.reload();
-    // }, 2000);
+    formDog.reset();
     notifyUser('Dados excluídos com sucesso! :)', 'alert-success');
   } catch (e) {
     notifyUser(`Erro ao exluir os dados: (${e})!`, 'alert-danger');
