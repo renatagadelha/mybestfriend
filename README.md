@@ -18,3 +18,4 @@ Just clone the project and open the `index.html` page.
 - Insert CCS animation
 - Use Task Runner to minify the CSS and JS
 - Unit Tests
+- Adjust the mobile layout
