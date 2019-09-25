@@ -4,32 +4,143 @@ font-family: 'Modak', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Josefin Slab', serif; */
 
+/* Itinializing */
+
+* {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   background-color: #33ade6;
   background-image: url("images/cardboard.png"), url("images/grass.png");
   background-position: top, bottom;
   background-repeat: repeat, repeat-x;
+  font-family: 'Roboto', sans-serif;
+  color: #212529;
 }
 
 .container {
   max-width: 800px;
-}
-
-.title {
-  margin: 0.8rem 0px;
+  margin: 0.8rem auto;
+  padding: 0 1rem;
 }
 
 h1, h2 {
   font-family: 'Pacifico', cursive;
 }
 
-.alert{
-  display:none;
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-form {
-  margin: 0;
+.alert{
+  display: none;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.main {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.main > div {
+  padding: 0 1rem;
+}
+
+.main-options, .main-picture {
+  width: 50%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: 
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  color: #ffffff;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+  transition: 
+    color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
 }
 
 #dogList {
@@ -37,14 +148,16 @@ form {
 }
 
 #formDog .btn {
+  width: 100%;
   margin-top: 1.5rem;
 }
 
-.pictureFrame > div {
+.pictureFrame {
   padding: 20px;
   background: white;
   box-shadow: 2px 3px 7px #656565;
   transform: rotate(5deg);
+  margin-top: 1rem;
 }
 
 .pictureContainer {
@@ -73,7 +186,38 @@ form {
 }
 
 #dogLabel {
+  min-height: 2rem;
   text-align: center;
   padding: 20px 20px 0 20px;
-  font-size: 2rem;
+}
+
+.btn-delete {
+  background: crimson;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50px;
+  border: none;
+  position: absolute;
+  top: -30;
+  right: -30;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .main-options, .main-picture  {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .pictureFrame {
+    transform: rotate(0deg);
+  }
 }

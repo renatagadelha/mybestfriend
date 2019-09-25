@@ -74,7 +74,6 @@ function getBreedImages() {
 function changeName() {
   const insertedName = dogName.value;
   dogText.innerText = insertedName;
-  dogLabel.innerText = insertedName;
 }
 
 function changeFont() {
@@ -137,7 +136,6 @@ function retrieveForm() {
 
     dogName.value = insertedName;
     dogText.innerText = insertedName;
-    dogLabel.innerText = insertedName;
 
     fontList.value = selectedFont;
     dogText.style.fontFamily = selectedFont;
