@@ -21,8 +21,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Modak|Pacifico|Roboto&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -32,22 +31,23 @@
   <body>
     <div class="container">
       <div class="header">
-          <h1>My Best Friend</h1>
+          <h1>My Best Friend <span id="heart"></span></h1>
           <div class="alert" role="alert">oi</div>
       </div>
 
       <div class="main">
 
         <div class="main-options">
-            <form id="formDog">
+            <form id="formDog" action="*" method="POST">
               <div class="form-group">
                 <label for="dogList">Escolha a sua raça:</label>
-                <select name="dogList" id="dogList" class="form-control"></select>
+                <select name="dogList" id="dogList" class="form-control">
+                </select>
               </div>
     
               <div class="form-group">
                 <label for="dogName">Nome:</label>
-                <input type="text" class="form-control" id="dogName" placeholder="My Best Friend">
+                <input name="dogName" type="text" value="" class="form-control" id="dogName" placeholder="My Best Friend">
               </div>
               
               <div class="form-group">
@@ -82,17 +82,13 @@
                 <div class="data-delete">
                     <button type="submit" id="buttonDelete" class="btn-delete">X</button>
                 </div>
-                <img id="dogPicture" src="images/dog-default.svg" class="img-fluid"/>
+                <img id="dogPicture" src="images/dog-default.svg" alt="Foto do(a) Melhor Amigo(a)" title="Foto do(a) Melhor Amigo(a)" class="img-fluid"/>
                 
                 <div id="dogText">My Best Friend</div>  
             </div>
 
             <div id="dogLabel"><span id="dateSave">My Best Friend</span></div>
           </div>
-        
-          <!-- <div class="data-delete">
-              <button type="submit" id="buttonDelete" class="btn">Excluir Dados</button>
-          </div> -->
         </div>
 
       </div>
